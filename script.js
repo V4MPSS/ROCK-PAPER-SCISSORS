@@ -61,5 +61,29 @@ function scissorschoice(){
    }
    console.log(compchoice);
 }
+optpaper.addEventListener('click', paperchoice);
 
+function paperchoice(){
+   var compchoice = Math.floor(Math.random()*3)+1;
+   if(compchoice == 3){
+      playerscorenum++;
+      playerpic.src ="images/paper.png";
+      computerpic.src ="images/rock.png";
+      playerscorehtml.innerHTML =playerscorenum;
+      winorlose.innerHTML ="YOU WIN!!!!";
+   }
+   if(compchoice == 2){
+      playerpic.src ="images/paper.png";
+      computerpic.src ="images/scissors.png";
+      computerscorenum++;
+      computerscorehtml.innerHTML =computerscorenum;
+      winorlose.innerHTML ="you lose...:(";
+   }
+   if(compchoice == 1){
+      playerpic.src ="images/paper.png";
+      computerpic.src ="images/paper.png";
+      winorlose.innerHTML ="Tie¯\_(ツ)_/¯";
+   }
+   console.log(computerscorenum);
+}
 
